@@ -1,0 +1,31 @@
+<mat-action-list>
+    <div mat-subheader>Welcome</div>
+    <button mat-list-item routerLink="/">
+        <mat-icon mat-list-icon class="p-t-3" color="primary">business_center</mat-icon> Portfolio
+    </button>
+    <div class="p-l-20">
+        <mat-action-list>
+            <button mat-list-item (click)="goToLoan()">
+                <mat-icon mat-list-icon class="p-t-3" color="primary">real_estate_agent</mat-icon> Loan
+            </button>
+            <button mat-list-item (click)="goToIncome()">
+                <mat-icon mat-list-icon class="p-t-3" color="primary">currency_rupee</mat-icon> Income
+            </button>
+            <button mat-list-item routerLink="/">
+                <mat-icon mat-list-icon class="p-t-3" color="primary">savings</mat-icon> Asset
+            </button>
+        </mat-action-list>
+    </div>
+    <button mat-list-item routerLink="/">
+        <mat-icon mat-list-icon class="p-t-3" color="primary">account_balance_wallet</mat-icon> Wallet
+    </button>
+    <button mat-list-item routerLink="/">
+        <mat-icon mat-list-icon class="p-t-3" color="primary">store_front</mat-icon> Market
+    </button>
+    <button mat-list-item (click)="goToExpense()">
+        <mat-icon mat-list-icon class="p-t-3" color="primary">bloodtype</mat-icon> Expense
+    </button>
+    <button mat-list-item routerLink="/"> 
+        <mat-icon mat-list-icon class="p-t-3" color="primary">psychology</mat-icon> Strategy
+    </button>
+</mat-action-list>

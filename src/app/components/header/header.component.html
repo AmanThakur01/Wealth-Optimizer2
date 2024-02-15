@@ -1,0 +1,30 @@
+<header class="header">
+    <div >
+      <img src="assets/images/WealthGuardin.png" style="width: 180px; margin-left: 100px; cursor: pointer;" (click) = goToHome()>
+    </div>
+    <div >
+        <button *ngIf="!isUserLoggedIn" mat-raised-button color="primary" (click)="signIn()" class="m-r-20">SignIn</button>
+        <button *ngIf="!isUserLoggedIn" mat-raised-button color="primary" (click)="signUp()" class="m-r-20">SignUp</button>
+        <button *ngIf="isUserLoggedIn" mat-icon-button color="primary" (click)="logOut()" >
+          <mat-icon>power_settings_new</mat-icon>
+        </button>
+        <span class="dropdown" *ngIf="!isUserLoggedIn">
+            <!-- <img src="assets/images/icons8-menu-48.png" style="width: 40px;"> -->
+            <mat-icon color="primary" class="home-icon">home</mat-icon>
+            <div class="dropdown-content">
+            <a href="#">About Us</a>
+            <a href="#">Profile</a>
+            <a href="portfolio">Portfolio</a>
+            </div>
+        </span>
+        <button *ngIf="isUserLoggedIn" mat-icon-button color="primary"><mat-icon>account_circle</mat-icon></button>
+
+        <!-- <span class="dropdown" *ngIf="isUserLoggedIn">
+            <button mat-icon-button color="primary"><mat-icon>account_circle</mat-icon></button>
+            <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="portfolio">Portfolio</a>
+            </div>
+        </span> -->
+    </div>
+</header>

@@ -1,0 +1,27 @@
+<!-- <div class="news-section mt-4">
+    <div class="bottom-section">
+      <h3 class="bottom-title " style="color: #1b1dc7;">Feeds</h3>
+    </div>
+    <div class="row">
+      <div *ngFor="let data of topHeadlinesData" class="col-md-3 mt-3 mb-3">
+        <div class="box p-2 mb-2 rounded">
+          <img src="{{data.urlToImage}}" style="height: 150px; border-radius: 8px;" alt="image" width="100%">
+          <h5 class="mt-3 mb-3 ">{{data.title | short:60}}</h5>
+          <a class="btn btn-dark btn-sm" href="{{data.url}}" target="_blank">
+            Read More!
+          </a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <mat-card>
+    <mat-card-content *ngFor="let data of topHeadlinesData">
+      <img src="{{data.urlToImage}}" class="img-area" alt="image">
+      {{data.title | short:60}}
+      <a href="{{data.url}}" target="_blank">
+        Read More!
+      </a>
+    </mat-card-content>
+  </mat-card>
+  

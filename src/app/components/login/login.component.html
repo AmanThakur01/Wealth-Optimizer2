@@ -1,0 +1,35 @@
+
+<div >
+    <mat-card>
+        <div class="m-t-20 text-center">
+            <mat-icon fontIcon="login" ></mat-icon>
+        </div>
+        <h3 class="text-center">Login Here!</h3>
+        <!-- <form (ngSubmit)="login()" [formGroup]="formGroup" class="m-r-20 m-l-20"> -->
+        <form  [formGroup]="formGroup" class="m-r-20 m-l-20">
+            <mat-form-field class="full-width">
+            <mat-label>User Name</mat-label>
+            <input matInput required="true" [(ngModel)]="cred.userName" name="userName" formControlName="userName">
+            <mat-error *ngIf="formGroup.controls['userName'].errors && formGroup.controls['userName'].errors['required']">This is mandatory!</mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <div class="pass-visiblity">
+                <input matInput required="true" [type]="passType" [(ngModel)]="cred.password" name="password" formControlName="password">
+                <!-- <span> -->
+                    <mat-icon *ngIf="!show" fontIcon="visibility" (click)="showPass()"></mat-icon>
+                    <mat-icon *ngIf="show" fontIcon="visibility_off" (click)="hidePass()"></mat-icon>
+                <!-- </span> -->
+            </div>
+            
+            
+            <mat-error *ngIf="formGroup.controls['password'].errors && formGroup.controls['password'].errors['required']">This is mandatory!</mat-error>
+            </mat-form-field>
+            <div class="container text-center m-b-20">
+                <button mat-raised-button color="primary" type="submit" [disabled]="formGroup.invalid" class="m-r-20" (click)="login()">Login</button>
+                <button mat-raised-button (click)="cancel()">Cancel</button>
+            </div>
+        </form>
+        <app-loader *ngIf="isLoader" [overlay]="true" ></app-loader>
+    </mat-card>
+</div>

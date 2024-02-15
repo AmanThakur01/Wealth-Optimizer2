@@ -1,0 +1,54 @@
+
+<div >
+    <!-- <app-loader *ngIf="isLoader" [overlay]="true" ></app-loader> -->
+    <mat-card>
+    <div class="text-center">
+        <mat-icon fontIcon="person_add" class="m-t-20" ></mat-icon>
+    </div>
+    <h3 class="text-center">SignUp Here!</h3>
+    
+    
+    <form [formGroup]="formGroup" class="m-r-20 m-l-20">
+        <mat-form-field class="full-width">
+          <mat-label>User Name</mat-label>
+          <input matInput required="true" [(ngModel)]="user.userName" name="userName" formControlName="userName">
+          <mat-error *ngIf="formGroup.controls['userName'].errors && formGroup.controls['userName'].errors['required']">This is mandatory!</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Password</mat-label>
+          <div class="pass-visiblity">
+            <input matInput required="true" type="password" [(ngModel)]="user.password" name="password" formControlName="password">
+            <mat-icon *ngIf="!show" fontIcon="visibility" (click)="showPass()"></mat-icon>
+            <mat-icon *ngIf="show" fontIcon="visibility_off" (click)="hidePass()"></mat-icon>
+          </div>
+          <mat-error *ngIf="formGroup.controls['password'].errors && formGroup.controls['password'].errors['required']">This is mandatory!</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Name</mat-label>
+          <input matInput required="true" [(ngModel)]="user.name" name="name" formControlName="name">
+          <mat-error *ngIf="formGroup.controls['name'].errors && formGroup.controls['name'].errors['required']">This is mandatory!</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Phone Number</mat-label>
+          <span matPrefix>+91</span>
+          <input  required="true" matInput [(ngModel)]="user.phone" name="phone" formControlName="phone" maxlength="14">
+          <mat-error *ngIf="formGroup.controls['phone'].errors && formGroup.controls['phone'].errors['required']">This is mandatory!</mat-error>
+          <mat-error *ngIf="formGroup.controls['phone'].errors && formGroup.controls['phone'].errors['pattern']">Invalid Value!</mat-error>
+        
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label >E mail</mat-label>
+          <input matInput required="true" type="email" [(ngModel)]="user.email" name="email" formControlName="email">
+          <mat-error *ngIf="formGroup.controls['email'].errors && formGroup.controls['email'].errors['required']">This is mandatory!</mat-error>
+          <mat-error *ngIf="formGroup.controls['email'].errors && formGroup.controls['email'].errors['email']">Pattern not matched!</mat-error>
+        </mat-form-field>
+        <!-- Role to be added -->
+        <!-- Profile Picture to be added -->
+        <div class="container text-center m-b-20">
+            <button mat-raised-button color="primary" type="submit" [disabled]="formGroup.invalid" class="m-r-20" (click)="signup()">Sing Up</button>
+            <button mat-raised-button (click)="cancel()">Cancel</button>
+        </div>
+    </form>
+    <app-loader *ngIf="isLoader" [overlay]="true" ></app-loader>
+    </mat-card>
+</div>

@@ -1,0 +1,22 @@
+<div *ngIf="mode==='add'"  mat-dialog-title>Add Income</div>
+<div *ngIf="mode==='edit'" mat-dialog-title>Update Income</div>
+<mat-dialog-content>
+    <form [formGroup]="formGroup" class="m-r-20 m-l-20">
+        <mat-form-field class="full-width m-r-20">
+        <mat-label>Source</mat-label>
+        <input matInput required="true" [(ngModel)]="data.source" name="source" formControlName="source">
+        <mat-error *ngIf="formGroup.controls['source'].errors && formGroup.controls['source'].errors['required']">This is mandatory!</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+        <mat-label>Amount</mat-label>
+        <input matInput required="true" type="number" [(ngModel)]="data.amount" name="amount" formControlName="amount">
+        <mat-error *ngIf="formGroup.controls['amount'].errors && formGroup.controls['amount'].errors['required']">This is mandatory!</mat-error>
+        </mat-form-field>
+    </form>
+    <app-loader *ngIf="isLoader" [overlay]="true" ></app-loader>
+</mat-dialog-content>
+<mat-dialog-actions class="text-center">
+    <button *ngIf="mode==='add'" mat-raised-button color="primary" type="submit" [disabled]="formGroup.invalid" (click)="add()">Add</button>
+    <button *ngIf="mode==='edit'" mat-raised-button color="primary" type="submit" [disabled]="formGroup.invalid" (click)="edit()">Update</button>
+    <button mat-raised-button (click)="cancel()">Cancel</button>
+</mat-dialog-actions>

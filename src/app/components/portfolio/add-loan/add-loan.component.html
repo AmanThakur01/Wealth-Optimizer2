@@ -1,0 +1,76 @@
+<div *ngIf="mode==='add'" mat-dialog-title>Add Loan</div>
+<div *ngIf="mode==='edit'" mat-dialog-title>Update Loan</div>
+<mat-dialog-content>
+    <form [formGroup]="formGroup" class="m-r-20 m-l-20">
+        <mat-form-field class="full-width m-r-20">
+            
+            <mat-label>category</mat-label>
+            <input matInput required="true" [(ngModel)]="data.start_date" name="category" formControlName="category">
+            <mat-error
+                *ngIf="formGroup.controls['category'].errors && formGroup.controls['category'].errors['required']">This
+                is mandatory!</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>start_date</mat-label>
+            <input matInput required="true" type="date" [(ngModel)]="data.start_date" name="start_date"
+                formControlName="start_date">
+            <mat-error
+                *ngIf="formGroup.controls['start_date'].errors && formGroup.controls['start_date'].errors['required']">This
+                is mandatory!</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>principle</mat-label>
+            <input matInput required="true" type="number" [(ngModel)]="data.principle" name="principle"
+                formControlName="principle">
+            <mat-error
+                *ngIf="formGroup.controls['principle'].errors && formGroup.controls['principle'].errors['required']">This
+                is mandatory!</mat-error>
+        </mat-form-field>
+        
+        <mat-form-field class="full-width">
+            <mat-label>emi</mat-label>
+            <input matInput required="true" type="number" [(ngModel)]="data.emi" name="emi"
+                formControlName="emi">
+            <mat-error
+                *ngIf="formGroup.controls['emi'].errors && formGroup.controls['emi'].errors['required']">This
+                is mandatory!</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>no_of_emi</mat-label>
+            <input matInput required="true" type="number" [(ngModel)]="data.no_of_emi" name="no_of_emi"
+                formControlName="no_of_emi">
+            <mat-error
+                *ngIf="formGroup.controls['no_of_emi'].errors && formGroup.controls['no_of_emi'].errors['required']">This
+                is mandatory!</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>net_loan_amt</mat-label>
+            <input matInput required="true" type="number" [(ngModel)]="data.net_loan_amt" name="net_loan_amt"
+                formControlName="net_loan_amt">
+            <mat-error
+                *ngIf="formGroup.controls['net_loan_amt'].errors && formGroup.controls['net_loan_amt'].errors['required']">This
+                is mandatory!</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>laps_emi</mat-label>
+            <input matInput required="true" type="number" [(ngModel)]="data.laps_emi" name="laps_emi"
+                formControlName="laps_emi">
+            <mat-error
+                *ngIf="formGroup.controls['laps_emi'].errors && formGroup.controls['laps_emi'].errors['required']">This
+                is mandatory!</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>remark</mat-label>
+            <input matInput required="true"  [(ngModel)]="data.remark" name="remark"
+                formControlName="remark">
+        </mat-form-field>
+    </form>
+    <app-loader *ngIf="isLoader" [overlay]="true"></app-loader>
+</mat-dialog-content>
+<mat-dialog-actions class="text-center">
+    <button *ngIf="mode==='add'" mat-raised-button color="primary" type="submit" [disabled]="formGroup.invalid"
+        (click)="add()">Add</button>
+    <button *ngIf="mode==='edit'" mat-raised-button color="primary" type="submit" [disabled]="formGroup.invalid"
+        (click)="edit()">Update</button>
+    <button mat-raised-button (click)="cancel()">Cancel</button>
+</mat-dialog-actions>

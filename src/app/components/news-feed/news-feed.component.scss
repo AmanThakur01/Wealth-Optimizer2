@@ -1,0 +1,25 @@
+.news-section {
+    margin-left: 15%;
+    margin-right: 15%;
+    // padding-right: 35%;
+  }
+  .box {
+    box-shadow: 0 2px 4px 0 rgba(5,47,95,.04), 0 12px 16px 0 rgba(52,105,203,.12);
+    padding: 16px 14px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+  }
+  .box:hover {
+    width: 105%;
+    height: 160px;
+  }
+  .img-area{
+    height: 150px;
+    border-radius: 8px;
+    width: 240px;
+  }
+  
+  

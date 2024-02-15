@@ -1,0 +1,30 @@
+<mat-card-content>
+    <!-- Income will be shown here -->
+    <button mat-icon-button color="primary" (click)="openAddIncome()" class="right">
+        <mat-icon color="primary">add</mat-icon>
+    </button>
+    <table mat-table [dataSource]="incomes">
+        <ng-container matColumnDef="srNo">
+            <th mat-header-cell *matHeaderCellDef>No</th>
+            <td mat-cell *matCellDef="let i=index">{{i+1}}. </td>
+        </ng-container>
+        <ng-container matColumnDef="source">
+            <th mat-header-cell *matHeaderCellDef>Source</th>
+            <td mat-cell *matCellDef="let ele">{{ele.source}}</td>
+        </ng-container>
+        <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef>Amount</th>
+            <td mat-cell *matCellDef="let ele">{{ele.amount}}</td>
+        </ng-container>
+        <ng-container matColumnDef="menu">
+            <th mat-header-cell *matHeaderCellDef>Menu</th>
+            <td mat-cell *matCellDef="let ele">
+                <button mat-icon-button (click)="edit(ele)"><mat-icon color="primary">edit</mat-icon></button>
+                <button mat-icon-button (click)="delete(ele)"><mat-icon color="primary">delete</mat-icon></button>
+                
+            </td>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="colSequence" class="full-width" ></mat-header-row>
+        <mat-row *matRowDef="let row;columns:colSequence" class="full-width"></mat-row>
+    </table>
+</mat-card-content>

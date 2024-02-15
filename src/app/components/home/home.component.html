@@ -1,0 +1,275 @@
+<app-header></app-header>
+<!-- <section class="static-banner">
+  <div class="banner">
+    <div class="content">
+      <h2>Best Investing Strategy<br>Industry Analysis</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eos modi maiores consequuntur dolores quidem commodi obcaecati impedit debitis tempora! Saepe, repudiandae labore dolores officia inventore voluptate velit, illum laudantium perferendis libero quaerat fuga atque voluptates quam accusamus officiis voluptatum...</p>
+    <button mat-raised-button color="primary" class="m-5">About Us</button>
+    <button mat-raised-button color="primary" >Explore more!</button>
+    </div>
+  </div>
+</section>
+
+
+<section class="services mt-5">
+    <div class="service-content">
+      <div class="section-title">
+        <h3 style="color: #1b1dc7;">Services</h3>
+      </div>
+      <div class="product-services row">
+        <div class="col-3 col-md-4 col-lg-3 col-xl-3 ord-6">
+          <div class="pb"><h5>credit cards</h5><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, architecto.</p>
+          <div class="product-icon"></div>
+          </div>
+        </div>
+        <div class="col-3 col-md-4 col-lg-3 col-xl-3 ord-7">
+          <div class="pb"><h5>Term life insurance</h5><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, architecto.</p></div>
+        </div>
+        <div class="col-3 col-md-4 col-lg-3 col-xl-3 ord-8">
+          <div class="pb"><h5>Health insurance</h5><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, architecto.</p></div>
+        </div>
+        <div class="col-3 col-md-4 col-lg-3 col-xl-3 ord-9">
+          <div class="pb"><h5>Home loan</h5><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, architecto.</p></div>
+        </div>
+        <div class="col-3 col-md-4 col-lg-3 col-xl-3 ord-10">
+          <div class="pb"><h5>Mutual funds</h5><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, architecto.</p></div>
+        </div>
+        <div class="col-3 col-md-4 col-lg-3 col-xl-3 ord-11">
+          <div class="pb"><h5>National pension system</h5><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, architecto.</p></div>
+        </div>
+        <div class="col-3 col-md-4 col-lg-3 col-xl-3 ord-12">
+          <div class="pb"><h5>Lic</h5><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, architecto.</p></div>
+        </div>
+        <div class="col-3 col-md-4 col-lg-3 col-xl-3 ord-13">
+          <div class="pb"><h5>Buisness Loans</h5><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, architecto.</p></div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+<!-- <app-news-feed></app-news-feed> -->
+
+
+
+<!-- Dividing into three sections -->
+
+<div class="bootstrap-wrapper bg-color">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <mat-card *ngIf="!isUserLoggedIn">
+          <mat-card-header>Market</mat-card-header>
+          <mat-card-content>
+            <app-market></app-market>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card *ngIf="isUserLoggedIn">
+          <app-side-bar></app-side-bar>
+        </mat-card>
+
+
+      </div>
+      <div class="col-md-6">
+        <mat-card *ngIf="!isUserLoggedIn">
+          <mat-card-header>Strategies</mat-card-header>
+          <mat-card-content>
+            <h2 class="wp-block-heading"><span id="what-is-sip">What is SIP?</span></h2>
+
+
+
+            <p>SIP stands for <a href="https://scripbox.com/mf/what-is-sip/">Systematic Investment Plan</a>. It is a
+              mode of investment where an investor invests a fixed amount at regular intervals, monthly, weekly, or
+              daily, to buy units of a mutual fund scheme.&nbsp; SIP helps investors to save regularly with a smaller
+              amount of money while benefiting from the long-term advantages of rupee-cost averaging. <a
+                href="https://scripbox.com/mf/rupee-cost-averaging/">Rupee cost averaging</a> means investing at
+              different market levels, which reduces the impact of market volatility and lowers the average cost of
+              investment.</p>
+
+
+
+            <h2 class="wp-block-heading"><span id="home-loan-emi-vs-sip">Home Loan EMI Vs SIP</span></h2>
+
+
+
+            <p>Home loan EMI is a fixed obligation you must pay monthly, regardless of your income or expenses. SIP is a
+              flexible option that you can start, <a href="https://scripbox.com/mf/how-to-stop-sip/">stop SIP</a> or
+              modify anytime, depending on your financial situation. </p>
+
+
+
+            <ul>
+              <li>Home loan EMI is how you pay off your debt over time, while SIP increases your wealth over time.&nbsp;
+              </li>
+
+
+
+              <li>Home loan EMI gives you tax benefits under <a href="https://scripbox.com/tax/section-80ccc/">Section
+                  80C</a> and Section 24 of the Income Tax Act, while SIP only provides tax benefits if you invest in
+                tax-saving ELSS mutual funds. </li>
+
+
+
+              <li>Home loan EMI has a fixed interest rate that you have to pay on the borrowed amount, while SIP has a
+                variable return rate that depends on the performance of the mutual fund scheme.</li>
+
+
+
+              <li>While home loan EMI is a way for you to own a home, <a
+                  href="https://scripbox.com/mf/why-sip-powerful-tool-against-market-volatility/">SIPs offer the
+                  potential for wealth creation</a>. When it comes to EMI vs SIP, both have their pros and cons. Let’s
+                look at which option is better: Home Loan Vs SIP.</li>
+            </ul>
+
+
+
+            <h3 class="wp-block-heading">Scenario 1: Home Loan Vs SIP ( Long-Term Vs Short Term)</h3>
+
+
+
+            <p>The two possible scenarios are opting for a long-tenure loan (with a lower EMI and investing the surplus
+              amounts) or a short-tenure loan (higher EMI). The choice between long-term and short-term tenure for a
+              loan will largely depend on your financial resources, obligations and objective. Here let’s break down
+              both scenarios to understand them better.&nbsp;</p>
+
+
+
+            <h4 class="wp-block-heading">Should I take a home loan of long tenure + lower EMI and invest the surplus?
+            </h4>
+
+
+
+            <p>Let’s take an example, Mr Sharma wants to take a home loan of INR 50 lakhs at an interest rate of 9% for
+              20 years (240 months). The EMI calculation can be done using the formula:</p>
+
+
+
+            <p>EMI = P × r × (1 + r)^n / ((1 + r)^n – 1)</p>
+
+
+
+            <p>where,</p>
+
+
+
+            <p>P – loan amount</p>
+
+
+
+            <p>r – monthly interest rate</p>
+
+
+
+            <p>n – loan tenure in months</p>
+
+
+
+            <figure class="wp-block-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><strong>Loan Details</strong></td>
+                    <td><strong>Amount</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Loan Amount</td>
+                    <td>INR 50 lakhs</td>
+                  </tr>
+                  <tr>
+                    <td>Interest Rate</td>
+                    <td>9%</td>
+                  </tr>
+                  <tr>
+                    <td>Loan Tenure</td>
+                    <td>20 years (240 months)</td>
+                  </tr>
+                  <tr>
+                    <td>EMI</td>
+                    <td>INR 44,986</td>
+                  </tr>
+                  <tr>
+                    <td>Total Interest Payable</td>
+                    <td>INR 57,96,711</td>
+                  </tr>
+                  <tr>
+                    <td>Total Payment (Principal + Interest)</td>
+                    <td>INR 1,07,96,711</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+
+
+
+            <p>Let’s assume Mr Sharma is comfortable paying INR 60,000 as EMI. Since the actual EMI amount is lower, he
+              can choose to invest the remaining INR 15,014 (60,000 – 44,986) in mutual funds through SIP.&nbsp;&nbsp;
+            </p>
+
+
+
+            <figure class="wp-block-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><strong>SIP Investment Details</strong></td>
+                    <td><strong>Amount</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Monthly Investment Amount</td>
+                    <td>INR 15,014</td>
+                  </tr>
+                  <tr>
+                    <td>Investment Tenure</td>
+                    <td>20 years</td>
+                  </tr>
+                  <tr>
+                    <td>Expected Annualised Return</td>
+                    <td>10%</td>
+                  </tr>
+                  <tr>
+                    <td>Expected Corpus</td>
+                    <td>INR 1,14,96,173</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>         
+
+          </mat-card-content>
+
+        </mat-card>
+
+        <mat-card *ngIf="isUserLoggedIn">
+          <div [ngSwitch]="currentComp">
+            <div *ngSwitchCase="'income'">
+              <app-income></app-income>
+            </div>
+            <div *ngSwitchCase="'loan'">
+              <app-loan></app-loan>
+            </div>
+            <div *ngSwitchCase="'expense'">
+              <app-expense></app-expense>
+            </div>
+          </div>
+        </mat-card>
+
+      </div>
+      <div class="col-md-3">
+        <mat-card>
+          <mat-card-header>
+            <h6> News feed</h6>
+          </mat-card-header>
+          <mat-card-content class="news-card">
+            <app-news-feed></app-news-feed>
+          </mat-card-content>
+
+        </mat-card>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<app-footer></app-footer>
